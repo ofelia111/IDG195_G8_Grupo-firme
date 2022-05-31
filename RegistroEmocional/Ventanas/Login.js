@@ -15,13 +15,13 @@ export default function Login({ navigation }) {
       />
       <TouchableOpacity
         style={[styles.boton]}
-        onPress={() => navigation.navigate("Details")}
+        onPress={() => navigation.navigate("Home")}
       >
         <Text style={[styles.botonText]}>Ingresar</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={[styles.boton2]}
-        onPress={() => navigation.navigate("Details")}
+        onPress={() => navigation.navigate("Login")}
       >
         <Text style={[styles.botonText]}>Crear Cuenta</Text>
       </TouchableOpacity>
@@ -37,6 +37,9 @@ export default function Login({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+
+  
+  
   container: {
     flex: 1,
     backgroundImage: "linear-gradient(#F38D88, #CCAAD5)",

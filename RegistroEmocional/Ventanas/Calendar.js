@@ -4,17 +4,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
-export default function Home({ navigation }) {
+export default function Home() {
   return (
     <View style={styles.container}>
       <Image style={styles.img} source={require("../src/imgs/koinobori.png")} />
-      <Text style={styles.titleText}>Registro Emocional</Text>
-      <TouchableOpacity
-        style={[styles.boton2]}
-        onPress={() => navigation.navigate("Login")}
-      >
-        <Text style={[styles.botonText]}>Crear Cuenta</Text>
-      </TouchableOpacity>
+      <Text style={styles.titleText}>CALENDARIOOO</Text>
     </View>     
   );
 }
