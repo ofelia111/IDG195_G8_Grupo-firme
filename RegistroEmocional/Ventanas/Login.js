@@ -5,7 +5,7 @@ import { StyleSheet, View, Image, Text, TouchableOpacity, TextInput } from 'reac
 export default function Login({ navigation }) {
   return (
     <View style={styles.container}>
-      <Image style={styles.img} source={require("../src/imgs/koinobori.png")} />
+      <Image style={styles.img} source={require("../src/imgs/loginicon.png")} />
       <Text style={styles.titleText}>Registro Emocional</Text>
       <TextInput placeholder="Usuario" style={styles.text} />
       <TextInput
@@ -19,6 +19,7 @@ export default function Login({ navigation }) {
       >
         <Text style={[styles.botonText]}>Ingresar</Text>
       </TouchableOpacity>
+      
       <TouchableOpacity
         style={[styles.boton2]}
         onPress={() => navigation.navigate("Login")}
@@ -26,12 +27,6 @@ export default function Login({ navigation }) {
         <Text style={[styles.botonText]}>Crear Cuenta</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.boton3}>
-        <Image
-          style={styles.icon}
-          source={require("../src/imgs/casitaicono.png")}
-        />
-      </TouchableOpacity>
     </View>
   );
 }
@@ -49,6 +44,7 @@ const styles = StyleSheet.create({
 
   titleText: {
     fontSize: 50,
+    textAlign: 'center',
     fontWeight: "bold",
     color: "white",
     marginBottom: 60,
@@ -83,7 +79,7 @@ const styles = StyleSheet.create({
 
   boton: {
     height: 42,
-    width: "19%",
+    width: "25%",
     flexDirection: "row",
     borderRadius: 20,
     shadowColor: "grey",
@@ -98,7 +94,7 @@ const styles = StyleSheet.create({
 
   boton2: {
     height: 42,
-    width: "19%",
+    width: "50%",
     flexDirection: "row",
     borderRadius: 20,
     elevation: 4,

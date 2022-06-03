@@ -5,16 +5,47 @@ import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
 export default function Login({ navigation }) {
   return (
     <View style={styles.container}>
-      <Image style={styles.img} source={require("../src/imgs/koinobori.png")} />
+      <Image style={styles.img} source={require("../src/imgs/persona-01.png")} />
+      <Image style={styles.img} source={require("../src/imgs/bella.png")} />
       <Text style={styles.titleText}>Bienvenida Bella</Text>
+      <Text style={styles.text}>¿Cómo te sientes hoy?</Text>
+      <Text style={styles.titleText2}>Calendario</Text>
+
 
       <Calendar
+
+  theme={{
+    backgroundColor: '#ffffff',
+    calendarBackground: '#ffffff',
+    textSectionTitleColor: '#ff7583',
+    textSectionTitleDisabledColor: '#ff7583',
+    selectedDayBackgroundColor: '#00adf5',
+    selectedDayTextColor: '#ffffff',
+    todayTextColor: '#00adf5',
+    dayTextColor: '#2d4150',
+    textDisabledColor: '#ff7583',
+    dotColor: '#00adf5',
+    selectedDotColor: '#ffffff',
+    arrowColor: '#ff7583',
+    disabledArrowColor: '#ff7583',
+    monthTextColor: '#ff7583',
+    indicatorColor: '#ff7583',
+    textDayFontFamily: 'monospace',
+    textMonthFontFamily: 'monospace',
+    textDayHeaderFontFamily: 'monospace',
+    textDayFontWeight: '300',
+    textMonthFontWeight: 'bold',
+    textDayHeaderFontWeight: '300',
+    textDayFontSize: 16,
+    textMonthFontSize: 16,
+    textDayHeaderFontSize: 16
+  }}
   // Initially visible month. Default = now
-  current={'2022-05-20'}
+  current={'2022-06-20'}
   // Minimum date that can be selected, dates before minDate will be grayed out. Default = undefined
-  minDate={'2022-05-01'}
+  minDate={'2022-06-01'}
   // Maximum date that can be selected, dates after maxDate will be grayed out. Default = undefined
-  maxDate={'2023-06-30'}
+  maxDate={'2023-07-30'}
   // Handler which gets executed on day press. Default = undefined
   onDayPress={day => {
     console.log('selected day', day);
@@ -38,21 +69,27 @@ export default function Login({ navigation }) {
   disableAllTouchEventsForDisabledDays={true}
   //Fechas que queremos marcar por default
   markedDates={{
-      '2022-05-16': { selected: true, marked: true, selectedColor: '#90e4cd' },
-      '2022-05-17': { marked: true },
-      '2022-05-18': { marked: true, dotColor: 'red', activeOpacity: 0 },
-      '2022-05-19': { disabled: true, disableTouchEvent: true }
+      '2022-06-04': { selected: true, marked: true, selectedColor: '#90e4cd' },
+      '2022-06-03': { marked: true },
+      '2022-06-02': { marked: true, dotColor: 'red', activeOpacity: 0 },
+      '2022-06-05': { disabled: true, disableTouchEvent: true }
   }}
+
+  
 />
 
     </View>
   );
 }
 
+
+
+
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundImage: "linear-gradient(#F38D88, #CCAAD5)",
+    backgroundImage: "##FFFFFF",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -60,7 +97,15 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 30,
     fontWeight: "bold",
-    color: "white",
+    color: "#84BCDD",
+    marginBottom: 8,
+    justifyContent: 'left',
+  },
+
+  titleText2: {
+    fontSize: 30,
+    fontWeight: "bold",
+    color: "#EB959B",
     marginBottom: 60,
   },
 
@@ -72,10 +117,11 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    fontSize: 20,
-    padding: 10,
-    backgroundColor: "white",
-    marginBottom: 20,
+    fontSize: 13,
+    fontWeight: "bold",
+    padding: 1,
+    color: "#707070",
+    marginBottom: 5,
   },
 
   img: {
@@ -139,6 +185,5 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "bold",
   },
-
 
 });

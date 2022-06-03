@@ -1,18 +1,18 @@
 import * as React from 'react';
-import { StyleSheet, View, Image, Text, TouchableOpacity, TextInput } from 'react-native';
+import { StyleSheet, View, Image, Text, TouchableOpacity, TextInput, DatePickerAndroid } from 'react-native';
 
 
 export default function Login({ navigation }) {
   return (
     <View style={styles.container}>
-      <Image style={styles.img} source={require("../src/imgs/koinobori.png")} />
+      <Image style={styles.img} source={require("../src/imgs/bella.png")} />
       <Text style={styles.titleText}>Bella Swan</Text>
 
       <TouchableOpacity
-        style={[styles.boton2]}
+        style={[styles.boton]}
         onPress={() => navigation.navigate("Details")}
       >
-        <Text style={[styles.botonText]}>Mi información</Text>
+        <Text style={[styles.botonText2]}>Mi información</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={[styles.boton2]}
@@ -36,15 +36,8 @@ export default function Login({ navigation }) {
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={[styles.boton]}
-        onPress={() => navigation.navigate("Details")}
-      >
-        <Text style={[styles.botonText2]}>Cuenta</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
         style={[styles.boton3]}
-        onPress={() => navigation.navigate("Details")}
+        onPress={() => navigation.navigate("Login")}
       >
         <Text style={[styles.botonText2]}>Cerrar sesión</Text>
       </TouchableOpacity>
@@ -97,7 +90,7 @@ const styles = StyleSheet.create({
 
   boton: {
     height: 42,
-    width: "19%",
+    width: "70%",
     flexDirection: "row",
     borderRadius: 20,
     shadowColor: "grey",
@@ -111,19 +104,24 @@ const styles = StyleSheet.create({
   },
 
   boton2: {
+    border: '3px solid #84BCDD', 
     height: 42,
-    width: "19%",
+    width: "70%",
     flexDirection: "row",
     borderRadius: 20,
+    shadowColor: "grey",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.0,
+    shadowRadius: 2,
     elevation: 4,
-    border: "2px #87BCDD",
+    backgroundColor: "white",
     justifyContent: "center",
     marginTop: 30,
   },
 
   boton3: {
     height: 42,
-    width: "19%",
+    width: "70%",
     flexDirection: "row",
     borderRadius: 20,
     shadowColor: "grey",
@@ -145,7 +143,7 @@ const styles = StyleSheet.create({
   },
 
   botonText2: {
-    marginTop: 5,
+    marginTop: 6,
     fontSize: 18,
     textAlign: "center",
     color: "white",
